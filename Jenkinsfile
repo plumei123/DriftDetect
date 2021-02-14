@@ -23,7 +23,7 @@ pipeline {
                 //Initiate drift detection,check result status	
                 sh '''
                     echo "The environment is $StackName"
-					chmod +x ./deploy_ekscluster_all.sh
+					chmod +x ./check-drift.sh
 					sh ./check-drift.sh $StackName $REGION
 			    '''
             }
